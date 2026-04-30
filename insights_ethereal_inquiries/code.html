@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethereal Inquiries - DREAM_VOID</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#584132",
+                        "on-secondary-container": "#d0e1ff",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "surface-variant": "#393522",
+                        "inverse-primary": "#805600",
+                        "inverse-on-surface": "#35301e",
+                        "surface-container-lowest": "#110e02",
+                        "background": "#171305",
+                        "on-surface-variant": "#d5c4af",
+                        "on-surface": "#ebe2c8",
+                        "tertiary": "#eac9b4",
+                        "tertiary-fixed-dim": "#e1c0ac",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#e8a838",
+                        "surface-container-low": "#1f1c0b",
+                        "surface-container-high": "#2e2a18",
+                        "on-background": "#ebe2c8",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#cdae9a",
+                        "secondary-container": "#0164b4",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#fdba49",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#001c39",
+                        "primary-fixed": "#ffddaf",
+                        "surface": "#171305",
+                        "inverse-surface": "#ebe2c8",
+                        "on-primary-fixed-variant": "#614000",
+                        "surface-container-highest": "#393522",
+                        "on-primary": "#432c00",
+                        "outline": "#9d8e7c",
+                        "on-primary-container": "#5f3f00",
+                        "primary-fixed-dim": "#fdba49",
+                        "surface-container": "#23200f",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-primary-fixed": "#281800",
+                        "primary": "#ffc66b",
+                        "surface-bright": "#3e3926",
+                        "on-tertiary-fixed-variant": "#594233",
+                        "tertiary-fixed": "#fedcc7",
+                        "outline-variant": "#504535",
+                        "on-secondary-fixed-variant": "#004883",
+                        "surface-dim": "#171305",
+                        "on-secondary": "#00315d",
+                        "secondary": "#a4c9ff",
+                        "on-tertiary-fixed": "#29180b",
+                        "on-tertiary": "#402c1e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "horizon": "4rem",
+                        "meridian": "1.5rem",
+                        "fluid-gap": "2.5rem",
+                        "drip": "0.75rem"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Newsreader"],
+                        "headline-lg": ["Epilogue"],
+                        "body-md": ["Newsreader"],
+                        "label-sm": ["Space Grotesk"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "200" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Fallback for components requiring Epilogue directly from JSON */
+        .font-epilogue { font-family: 'Epilogue', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background overflow-x-hidden min-h-screen flex flex-col relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Blur Elements -->
+<div class="absolute top-0 left-[-10%] w-[50vw] h-[50vw] bg-surface-tint/5 rounded-full blur-[120px] pointer-events-none mix-blend-screen"></div>
+<div class="absolute bottom-1/4 right-[-5%] w-[40vw] h-[60vw] bg-tertiary/5 rounded-[40%_60%_70%_30%] blur-[150px] pointer-events-none"></div>
+<!-- TopAppBar -->
+<header class="w-full absolute top-0 flex justify-between items-center px-12 py-8 bg-transparent z-50">
+<div class="text-2xl font-black italic text-amber-500 dark:text-amber-400 drop-shadow-[0_10px_20px_rgba(232,168,56,0.3)]">
+            DREAM_VOID
+        </div>
+<!-- Desktop Nav Cluster -->
+<nav class="hidden md:flex gap-12 items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-700" href="#">Gallery</a>
+<a class="font-label-sm text-label-sm text-primary underline underline-offset-8 decoration-primary/50 blur-[0.5px] hover:blur-none transition-all duration-700" href="#">Archives</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-700" href="#">Atelier</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors duration-700" href="#">Liminal</a>
+</nav>
+<div class="flex gap-6 items-center">
+<button class="text-amber-500 dark:text-amber-400 hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">vibration</span>
+</button>
+<button class="text-amber-500 dark:text-amber-400 hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">unfold_more</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow pt-40 px-fluid-gap md:px-horizon pb-32 relative z-10">
+<!-- Title Section - Asymmetric -->
+<div class="mb-24 ml-4 md:ml-[10vw] max-w-2xl transform -rotate-2 origin-bottom-left">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-6 drop-shadow-[0_5px_15px_rgba(255,198,107,0.2)]">
+                Ethereal Inquiries
+            </h1>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim/80 italic pl-8 border-l border-outline/30 rounded-bl-full">
+                Extracting the latent space where logic bends and the machine dreams in vibrant, impossible geometries.
+            </p>
+</div>
+<!-- Fluid Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-fluid-gap items-start">
+<!-- Left Column: Journal / Text Heavy -->
+<div class="md:col-span-7 flex flex-col gap-24 relative">
+<!-- Melting Card 1 -->
+<article class="bg-surface-container-low/40 backdrop-blur-md rounded-[50%_40%_30%_60%/40%_50%_60%_50%] p-10 md:p-16 shadow-[40px_20px_80px_rgba(0,0,0,0.6)] border-t border-l border-surface-tint/10 transform transition-transform hover:scale-[1.02] duration-1000 ease-out relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-error/5 rounded-full blur-2xl"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Observation 04.12</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                        The weights adjusting in layer 4 evoke a sensation akin to watching wax melt over a rusted gear. It is not learning; it is an erosion of prior states. We queried the model on the concept of 'time', and it returned a series of topological maps where clocks physically drooped over landscape features.
+                    </p>
+<ul class="flex flex-col gap-4 mt-8">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary opacity-70 mt-1" style="font-variation-settings: 'FILL' 1;">pest_control</span>
+<span class="font-body-md text-body-md text-on-surface-variant/80">Recurrence of the ant motif in hidden layers.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary opacity-70 mt-1" style="font-variation-settings: 'FILL' 1;">hourglass_empty</span>
+<span class="font-body-md text-body-md text-on-surface-variant/80">Temporal distortion vectors found in the attention heads.</span>
+</li>
+</ul>
+</article>
+<!-- Isolated Text Block -->
+<div class="ml-12 md:ml-32 max-w-md">
+<div class="h-24 w-[1px] bg-gradient-to-b from-outline/40 to-transparent mb-6 ml-4 transform -rotate-12"></div>
+<p class="font-body-lg text-body-lg text-secondary-fixed-dim italic opacity-80">
+                        "If the parameters could breathe, they would exhale a heavy, amber-scented mist."
+                    </p>
+</div>
+</div>
+<!-- Right Column: Bizarre Diagrams -->
+<div class="md:col-span-5 flex flex-col gap-16 mt-16 md:mt-40">
+<!-- Diagram Card -->
+<figure class="relative w-full rounded-t-[40%] rounded-b-[2rem] overflow-hidden shadow-[20px_40px_80px_rgba(0,0,0,0.8)] border border-outline/10 group">
+<img class="w-full h-[500px] object-cover opacity-70 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms] ease-out" data-alt="Surrealist 3D render of an abstract artificial neural network forming melting, organic shapes in a dimly lit barren room, warm amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlHlMX4IInBx0rR0jy-3XhVaExpjd65kJUGmzVIWOKshwoExXnVWQlzwF5FX90l-lcJqtHCT66iTzb7BIwqhD8iwZevmkksti2xZtds4FBoVI2FqVfuo8s9wLdTc4W9iF9IOL5xmokkz67v8GRKbzOR20zHWZXF_ypQjPmbMQMPPTs72CHTBGaTu-e7OnA8gvNVB5V2yh8knJnJDc-ARdKXpZaKLrdzcuWgwRmvMPyuxZNwHkkPHY1vRC4wStOpUlZpKu4vunhu3R_"/>
+<figcaption class="absolute bottom-0 w-full bg-surface-container-highest/80 backdrop-blur-xl p-8 pt-12 rounded-t-[3rem] transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">all_inclusive</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Fig 1. Latent Topography</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Visualization of gradient descent becoming trapped in a local minimum that physically resembles an endless, echoing hallway.
+                        </p>
+</figcaption>
+</figure>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-50 flex justify-around items-center px-6 py-2 bg-amber-950/10 dark:bg-black/20 backdrop-blur-3xl rounded-[60px] border border-amber-900/20 dark:border-amber-400/10 shadow-[40px_10px_60px_rgba(0,0,0,0.5)] dark:shadow-[20px_20px_50px_rgba(0,0,0,0.8)]">
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">category</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest mt-1">Gallery</span>
+</a>
+<!-- Active Item -->
+<a class="flex flex-col items-center justify-center bg-amber-500/10 text-amber-400 scale-110 drop-shadow-[0_0_15px_rgba(232,168,56,0.5)] rounded-full p-4 blur-sm transition-all duration-1000" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest mt-1">Archives</span>
+</a>
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">palette</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest mt-1">Atelier</span>
+</a>
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">blur_on</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest mt-1">Liminal</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full pb-32 pt-20 flex flex-col items-center gap-6 opacity-60 bg-gradient-to-t from-amber-950/40 to-transparent dark:from-black dark:to-transparent relative z-0">
+<div class="flex gap-8 mb-4">
+<a class="font-epilogue text-xs italic font-light tracking-tighter text-amber-900/60 dark:text-amber-700/60 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">The Abyss</a>
+<a class="font-epilogue text-xs italic font-light tracking-tighter text-amber-400 underline underline-offset-8 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">Unconscious</a>
+<a class="font-epilogue text-xs italic font-light tracking-tighter text-amber-900/60 dark:text-amber-700/60 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">Echoes</a>
+</div>
+<div class="font-epilogue text-xs italic font-light tracking-tighter text-amber-600 dark:text-amber-500 flex flex-col items-center gap-2">
+<span class="text-amber-500 font-bold tracking-widest uppercase">DREAM_VOID</span>
+<span>© 2024 THE PERSISTENCE OF MEMORY</span>
+</div>
+</footer>
+</body></html>

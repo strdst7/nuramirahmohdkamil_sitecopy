@@ -1,0 +1,197 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The Persistence of Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-container": "#584132",
+                        "on-secondary-container": "#d0e1ff",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "surface-variant": "#393522",
+                        "inverse-primary": "#805600",
+                        "inverse-on-surface": "#35301e",
+                        "surface-container-lowest": "#110e02",
+                        "background": "#171305",
+                        "on-surface-variant": "#d5c4af",
+                        "on-surface": "#ebe2c8",
+                        "tertiary": "#eac9b4",
+                        "tertiary-fixed-dim": "#e1c0ac",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#e8a838",
+                        "surface-container-low": "#1f1c0b",
+                        "surface-container-high": "#2e2a18",
+                        "on-background": "#ebe2c8",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#cdae9a",
+                        "secondary-container": "#0164b4",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#fdba49",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#001c39",
+                        "primary-fixed": "#ffddaf",
+                        "surface": "#171305",
+                        "inverse-surface": "#ebe2c8",
+                        "on-primary-fixed-variant": "#614000",
+                        "surface-container-highest": "#393522",
+                        "on-primary": "#432c00",
+                        "outline": "#9d8e7c",
+                        "on-primary-container": "#5f3f00",
+                        "primary-fixed-dim": "#fdba49",
+                        "surface-container": "#23200f",
+                        "secondary-fixed": "#d4e3ff",
+                        "on-primary-fixed": "#281800",
+                        "primary": "#ffc66b",
+                        "surface-bright": "#3e3926",
+                        "on-tertiary-fixed-variant": "#594233",
+                        "tertiary-fixed": "#fedcc7",
+                        "outline-variant": "#504535",
+                        "on-secondary-fixed-variant": "#004883",
+                        "surface-dim": "#171305",
+                        "on-secondary": "#00315d",
+                        "secondary": "#a4c9ff",
+                        "on-tertiary-fixed": "#29180b",
+                        "on-tertiary": "#402c1e"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "horizon": "4rem",
+                        "meridian": "1.5rem",
+                        "fluid-gap": "2.5rem",
+                        "drip": "0.75rem"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Newsreader"],
+                        "headline-lg": ["Epilogue"],
+                        "body-md": ["Newsreader"],
+                        "label-sm": ["Space Grotesk"],
+                        "headline-md": ["Epilogue"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "200" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "300" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- Ambient Background -->
+<div class="fixed inset-0 z-[-1] pointer-events-none opacity-40 blur-3xl mix-blend-screen" style="background: radial-gradient(circle at 70% 30%, theme('colors.primary-container') 0%, transparent 60%), radial-gradient(circle at 30% 80%, theme('colors.secondary-container') 0%, transparent 50%);">
+</div>
+<!-- TopAppBar -->
+<header class="docked full-width top-0 hidden md:flex flex justify-between items-center w-full px-12 py-8 bg-transparent z-50 transition-all duration-1000 blur-none hover:blur-sm">
+<div class="text-2xl font-black italic text-amber-500 dark:text-amber-400 drop-shadow-[0_10px_20px_rgba(232,168,56,0.3)]">
+            NUR_AMIRAH_MOHD_KAMIL</div>
+<div class="flex gap-4">
+<button class="text-amber-500 dark:text-amber-400 hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined">vibration</span>
+</button>
+<button class="text-amber-500 dark:text-amber-400 hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined">unfold_more</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-horizon pb-32 px-meridian md:px-horizon flex flex-col gap-horizon">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col justify-center relative">
+<div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center rounded-[40%_60%_70%_30%/40%_50%_60%_50%] blur-xl" data-alt="abstract desert dunes with warm golden hour light and soft rolling shadows surreal landscape" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBrpdCulfdrBKSd0R4PnpC_YHvS_3W1HGcYDsE8RxSNkgsnhAq-f3f0X1omuKeW59NoZefJxQUlRGdvKAinEXGMdlJMnERwYzktwIK-3EB8JkKGL9Dd02kHgMIPqFuwg2oUg8SDg-HkML_sN1YKFldM7RpGEaYXQaI8sgNhizJ2X3PLHnWhIFfB-BX1oiW5VfTHHhqCuoXqfMexTFrYMpmIMPvbYaZ9fab3EMWKZ-7XBWIjSnSkZQpIrKzkIpcCjcQJQApCIYZ9cfWd&quot;);">
+</div>
+<div class="z-10 max-w-4xl self-center text-center">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-fluid-gap tracking-tighter drop-shadow-[0_20px_40px_rgba(255,198,107,0.2)]">
+                    The Persistence of Intelligence
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">
+                    Exploring the malleable boundary between artificial cognition and human dreaming.
+                </p>
+</div>
+<div class="absolute bottom-10 right-20 w-48 h-48 bg-tertiary-container/20 rounded-[30%_70%_70%_30%/30%_30%_70%_70%] backdrop-blur-md shadow-[40px_10px_60px_rgba(0,0,0,0.5)] border border-outline/20 hover:scale-105 transition-transform duration-700 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl opacity-50">memory</span>
+</div>
+</section>
+<!-- Gallery / Work Section (Bentoish, asymmetric) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-fluid-gap">
+<div class="md:col-span-8 bg-surface-container-low rounded-[2rem_5rem_1rem_3rem] p-8 shadow-[40px_10px_60px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent z-0"></div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex items-center gap-drip mb-horizon">
+<span class="material-symbols-outlined text-secondary">visibility</span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Visual Cortex</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-drip">Synaptic Landscapes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                         Generative topographies molded by deep learning models, visualizing thought processes as physical terrain.
+                     </p>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container rounded-[4rem_1rem_4rem_1rem] p-8 shadow-[20px_20px_50px_rgba(0,0,0,0.6)] flex flex-col justify-end min-h-[300px] relative border border-outline-variant/30">
+<img alt="" class="absolute inset-0 w-full h-full object-cover rounded-[4rem_1rem_4rem_1rem] opacity-30 mix-blend-luminosity" data-alt="abstract liquid flowing shapes in warm amber and cool blue tones macro photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENO8c5CZ8oMF5bSA-2FkAx6cyi-kfVmC0RasfCFyCAwl-oHBG0qEsqOLaPniKwrygB8pwOTJaYqHm68iVSdGeHXpoPD9sTe7wAfmrrfmDsqdW3HiE6kYV9tQlgb1RlqORW5mnZDhLGTxNceZQcCfipATlTqZXjplyvJauEfSZpEricUKvo6PdkPOIZ-nfUKn1_t_tTd3qNfEVvrLyJeGJFbJdhWF5HUqgVCjv-kvoeiOXzCX0FpTt1FBZRGVOa9he-6RcltZ_Vfys">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-tertiary">Echo Chambers</h3>
+<button class="mt-drip bg-primary/20 text-primary font-label-sm text-label-sm px-6 py-3 rounded-[50%_50%_50%_50%] backdrop-blur-sm border border-primary/30 hover:scale-105 transition-transform">
+                        Explore
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-8 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-50 flex justify-around items-center px-6 py-2 bg-amber-950/10 dark:bg-black/20 backdrop-blur-3xl rounded-[60px] border border-amber-900/20 dark:border-amber-400/10 shadow-[40px_10px_60px_rgba(0,0,0,0.5)] dark:shadow-[20px_20px_50px_rgba(0,0,0,0.8)]">
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out font-epilogue text-[10px] font-medium tracking-widest" href="#">
+<span class="material-symbols-outlined mb-1">category</span>
+            Gallery
+        </a>
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out font-epilogue text-[10px] font-medium tracking-widest" href="#">
+<span class="material-symbols-outlined mb-1">auto_stories</span>
+            Archives
+        </a>
+<a class="flex flex-col items-center justify-center bg-amber-500/10 text-amber-400 scale-110 drop-shadow-[0_0_15px_rgba(232,168,56,0.5)] rounded-full p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out font-epilogue text-[10px] font-medium tracking-widest" href="#">
+<span class="material-symbols-outlined mb-1">palette</span>
+            Atelier
+        </a>
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out font-epilogue text-[10px] font-medium tracking-widest" href="#">
+<span class="material-symbols-outlined mb-1">blur_on</span>
+            Liminal
+        </a>
+</nav>
+<!-- Footer -->
+<footer class="full-width pb-32 pt-20 flex flex-col items-center gap-6 w-full opacity-60 bg-gradient-to-t from-amber-950/40 to-transparent dark:from-black dark:to-transparent">
+<div class="text-amber-500 font-bold">
+            DREAM_VOID
+        </div>
+<div class="flex gap-4">
+<a class="text-amber-900/60 dark:text-amber-700/60 font-epilogue text-xs italic font-light tracking-tighter hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">The Abyss</a>
+<a class="text-amber-900/60 dark:text-amber-700/60 font-epilogue text-xs italic font-light tracking-tighter hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">Unconscious</a>
+<a class="text-amber-900/60 dark:text-amber-700/60 font-epilogue text-xs italic font-light tracking-tighter hover:text-amber-200 hover:blur-[1px] transition-all duration-1000" href="#">Echoes</a>
+</div>
+<div class="font-epilogue text-xs italic font-light tracking-tighter text-amber-600 dark:text-amber-500">
+            © 2024 THE PERSISTENCE OF MEMORY
+        </div>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Archive of Dreams</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#584132",
+                      "on-secondary-container": "#d0e1ff",
+                      "secondary-fixed-dim": "#a4c9ff",
+                      "surface-variant": "#393522",
+                      "inverse-primary": "#805600",
+                      "inverse-on-surface": "#35301e",
+                      "surface-container-lowest": "#110e02",
+                      "background": "#171305",
+                      "on-surface-variant": "#d5c4af",
+                      "on-surface": "#ebe2c8",
+                      "tertiary": "#eac9b4",
+                      "tertiary-fixed-dim": "#e1c0ac",
+                      "on-error-container": "#ffdad6",
+                      "primary-container": "#e8a838",
+                      "surface-container-low": "#1f1c0b",
+                      "surface-container-high": "#2e2a18",
+                      "on-background": "#ebe2c8",
+                      "error-container": "#93000a",
+                      "tertiary-container": "#cdae9a",
+                      "secondary-container": "#0164b4",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#fdba49",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#001c39",
+                      "primary-fixed": "#ffddaf",
+                      "surface": "#171305",
+                      "inverse-surface": "#ebe2c8",
+                      "on-primary-fixed-variant": "#614000",
+                      "surface-container-highest": "#393522",
+                      "on-primary": "#432c00",
+                      "outline": "#9d8e7c",
+                      "on-primary-container": "#5f3f00",
+                      "primary-fixed-dim": "#fdba49",
+                      "surface-container": "#23200f",
+                      "secondary-fixed": "#d4e3ff",
+                      "on-primary-fixed": "#281800",
+                      "primary": "#ffc66b",
+                      "surface-bright": "#3e3926",
+                      "on-tertiary-fixed-variant": "#594233",
+                      "tertiary-fixed": "#fedcc7",
+                      "outline-variant": "#504535",
+                      "on-secondary-fixed-variant": "#004883",
+                      "surface-dim": "#171305",
+                      "on-secondary": "#00315d",
+                      "secondary": "#a4c9ff",
+                      "on-tertiary-fixed": "#29180b",
+                      "on-tertiary": "#402c1e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "horizon": "4rem",
+                      "meridian": "1.5rem",
+                      "fluid-gap": "2.5rem",
+                      "drip": "0.75rem"
+              },
+              "fontFamily": {
+                      "body-lg": ["Newsreader"],
+                      "headline-lg": ["Epilogue"],
+                      "body-md": ["Newsreader"],
+                      "label-sm": ["Space Grotesk"],
+                      "headline-md": ["Epilogue"]
+              },
+              "fontSize": {
+                      "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "200"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "300"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .symbol-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Ambient Background Blur */
+        .ambient-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            background: radial-gradient(circle, rgba(232, 168, 56, 0.03) 0%, rgba(23, 19, 5, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<div class="ambient-glow"></div>
+<!-- TopAppBar -->
+<header class="fixed z-40 flex justify-between items-center w-full px-12 py-8 bg-transparent">
+<div class="text-2xl font-black italic text-amber-500 dark:text-amber-400 drop-shadow-[0_10px_20px_rgba(232,168,56,0.3)]">
+            DREAM_VOID
+        </div>
+<div class="flex items-center gap-6 text-amber-500 dark:text-amber-400">
+<button aria-label="vibration" class="hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined text-2xl">vibration</span>
+</button>
+<button aria-label="unfold_more" class="hover:opacity-70 transition-opacity duration-700">
+<span class="material-symbols-outlined text-2xl">unfold_more</span>
+</button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="relative z-10 w-full min-h-[2048px] pt-40 pb-64 px-8 md:px-horizon">
+<!-- Surreal SVG Connections -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-20 mix-blend-overlay" preserveaspectratio="none">
+<path class="text-primary" d="M 200,300 C 400,200 600,600 800,400 S 1200,800 1000,1200" fill="none" stroke="currentColor" stroke-width="2"></path>
+<circle class="text-primary" cx="200" cy="300" fill="currentColor" r="4"></circle>
+<circle class="text-primary" cx="800" cy="400" fill="currentColor" r="4"></circle>
+<circle class="text-primary" cx="1000" cy="1200" fill="currentColor" r="4"></circle>
+</svg>
+<!-- Page Title -->
+<div class="relative z-10 mb-32 ml-[5%] md:ml-[15%] max-w-2xl">
+<h1 class="font-headline-lg text-headline-lg text-primary opacity-90 drop-shadow-[0_10px_30px_rgba(255,198,107,0.2)]">
+                The Archive of Dreams
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6 ml-8 border-l border-outline/30 pl-6">
+                Curated fragments of subconscious architecture, suspended in the ether. Drift through the artifacts.
+            </p>
+</div>
+<!-- Drifting Island 1 -->
+<article class="relative z-10 w-[90%] md:w-[450px] ml-auto mr-[10%] mb-40 bg-surface-container/40 backdrop-blur-xl border border-outline/10 shadow-[30px_50px_80px_rgba(0,0,0,0.6)] rounded-[4rem_2rem_5rem_3rem] overflow-hidden group hover:scale-[1.02] transition-transform duration-1000 ease-out">
+<div class="p-8 md:p-12 flex flex-col gap-6">
+<div class="w-full h-64 rounded-[2rem_4rem_2rem_5rem] overflow-hidden shadow-inner relative">
+<div class="absolute inset-0 bg-secondary/20 mix-blend-color-burn z-10 pointer-events-none"></div>
+<img alt="Abstract digital artwork showing flowing, melting liquid forms in amber and deep blue colors with soft volumetric lighting" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s] ease-out opacity-80 filter contrast-125 saturate-50" data-alt="Abstract digital artwork showing flowing, melting liquid forms in amber and deep blue colors with soft volumetric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWd1VdbNl-dO1zwsQ8V3lRcofLXi5isbQTYxaUuisUBiv_ARgwqXMjVC7DMNxWFykjeMI1eC4V6WXhpbOChXvxEomdznaU3GsyFPl5SJgdqyjl3oyHXnjlt6VNUofUCamJU8y-YuLDLjP8B560A5pLAb7XushCUqavpfQJZNrmK4GueIqeoOo2llry8j39eaXBFcIEgpDIsWNGXMV8kv1HO1qmT5y3-R8KDsf9LYef5RSU5rVC-9aN6nvrcsQ6m_vJAIotqpyubEJM"/>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm">hive</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">Project 01</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Echoes of the Melted Grid</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    A study in structural decay. What happens when the rigid constraints of modernism are exposed to the heat of irrationality?
+                </p>
+<div class="flex flex-wrap gap-3 mt-4">
+<span class="px-4 py-2 bg-secondary-container/10 border border-secondary-container/20 rounded-[2rem_1rem_2rem_1rem] font-label-sm text-label-sm text-secondary">UX Subversion</span>
+<span class="px-4 py-2 bg-primary-container/10 border border-primary-container/20 rounded-[1rem_2rem_1rem_2rem] font-label-sm text-label-sm text-primary">Tactile</span>
+</div>
+</div>
+</article>
+<!-- Drifting Island 2 -->
+<article class="relative z-10 w-[85%] md:w-[600px] ml-[5%] md:ml-[20%] mb-56 bg-surface-container-low/60 backdrop-blur-2xl border border-outline/10 shadow-[50px_40px_100px_rgba(0,0,0,0.5)] rounded-[3rem_6rem_4rem_5rem] overflow-hidden group hover:scale-[1.02] transition-transform duration-1000 ease-out">
+<div class="p-8 md:p-14 flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1 flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-sm">bubble_chart</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Project 02</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Weightless Atelier</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Designing for environments without gravity. UI components that behave like liquids in zero-G, responding to proximity rather than direct touch.
+                    </p>
+<button class="self-start mt-4 px-8 py-4 bg-primary/10 text-primary border border-primary/20 rounded-[2rem_1.5rem_2.5rem_1rem] font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary/20 hover:scale-105 transition-all duration-500 flex items-center gap-2">
+<span>Explore Fluidity</span>
+<span class="material-symbols-outlined text-sm">east</span>
+</button>
+</div>
+<div class="w-full md:w-64 h-64 md:h-80 rounded-[5rem_3rem_4rem_6rem] overflow-hidden shadow-[inset_0_0_40px_rgba(0,0,0,0.8)] relative shrink-0">
+<img alt="Surreal minimalist composition of floating smooth spheres and curved objects over a dark infinite horizon with ethereal dramatic lighting" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[2s] ease-out opacity-70 filter hue-rotate-15" data-alt="Surreal minimalist composition of floating smooth spheres and curved objects over a dark infinite horizon with ethereal dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM0mQbJ3JfbNNn7aytirWIpyWwDocAl-Rt_Cxctt74tJIm3zoMxkOiWkoNYauqlGNrokxxH7MIC__ZBkDX2Xmo0DuoStjhZLByMJpgyQZgDyYDmZP_MkzCFe90RoTAxG9aw-cqIslM8ME2q9vDKEwdUKOealBFGZnB6BxOInJEz12vxibk2cCLMsj5Z0XtwgB8302WrjPy2gMwBbuRWq1N4r_3ZeP-EiZYxYiEhfjxVq1ChRrKByhdC-I2iFP_odvaF4umwGZiQMTj"/>
+</div>
+</div>
+</article>
+<!-- Ambient Floating Element -->
+<div class="absolute right-[15%] top-[60%] opacity-40 mix-blend-screen pointer-events-none blur-sm animate-pulse" style="animation-duration: 8s;">
+<div class="w-32 h-32 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] border-2 border-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-4xl transform -rotate-12">hourglass_empty</span>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col items-center gap-6 w-full opacity-60 bg-gradient-to-t from-amber-950/40 to-transparent dark:from-black dark:to-transparent full-width pb-40 pt-20">
+<div class="text-amber-500 font-bold text-lg tracking-widest">
+            DREAM_VOID
+        </div>
+<div class="flex gap-8">
+<a class="text-amber-900/60 dark:text-amber-700/60 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000 font-epilogue text-xs italic font-light tracking-tighter" href="#">The Abyss</a>
+<a class="text-amber-900/60 dark:text-amber-700/60 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000 font-epilogue text-xs italic font-light tracking-tighter" href="#">Unconscious</a>
+<a class="text-amber-900/60 dark:text-amber-700/60 hover:text-amber-200 hover:blur-[1px] transition-all duration-1000 font-epilogue text-xs italic font-light tracking-tighter" href="#">Echoes</a>
+</div>
+<div class="font-epilogue text-xs italic font-light tracking-tighter text-amber-900/60 dark:text-amber-700/60 mt-4">
+            © 2024 THE PERSISTENCE OF MEMORY
+        </div>
+</footer>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-10 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-50 flex justify-around items-center px-6 py-2 bg-amber-950/10 dark:bg-black/20 backdrop-blur-3xl rounded-[60px] border border-amber-900/20 dark:border-amber-400/10 shadow-[40px_10px_60px_rgba(0,0,0,0.5)] dark:shadow-[20px_20px_50px_rgba(0,0,0,0.8)]">
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-amber-600 transition-colors">category</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest">Gallery</span>
+</a>
+<!-- Active Tab: Archives -->
+<a class="flex flex-col items-center justify-center bg-amber-500/10 text-amber-400 scale-110 drop-shadow-[0_0_15px_rgba(232,168,56,0.5)] rounded-full p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out" href="#">
+<span class="material-symbols-outlined symbol-fill mb-1">auto_stories</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest">Archives</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-amber-600 transition-colors">palette</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest">Atelier</span>
+</a>
+<!-- Inactive -->
+<a class="flex flex-col items-center justify-center text-amber-900 dark:text-amber-700 p-4 hover:scale-110 hover:-translate-y-2 transition-all duration-500 ease-in-out group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:text-amber-600 transition-colors">blur_on</span>
+<span class="font-epilogue text-[10px] font-medium tracking-widest">Liminal</span>
+</a>
+</nav>
+</body></html>
