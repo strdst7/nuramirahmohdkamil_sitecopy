@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <radialGradient id="sunset" cx="50%" cy="70%" r="70%">
+      <stop offset="0%" stop-color="#e8a838" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#ffc66b" stop-opacity="0.12"/>
+      <stop offset="75%" stop-color="#171305" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e8a838" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#e8a838" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="600" fill="#171305"/>
+  <!-- Ambient glow -->
+  <circle cx="400" cy="420" r="300" fill="url(#glow)"/>
+  <!-- Sunset gradient overlay -->
+  <rect width="800" height="600" fill="url(#sunset)"/>
+  <!-- Dune 1 - far back -->
+  <path d="M0 480 Q100 430 200 450 Q350 480 500 440 Q650 400 800 460 L800 600 L0 600 Z" fill="#e8a838" opacity="0.08"/>
+  <!-- Dune 2 -->
+  <path d="M0 500 Q80 470 180 490 Q300 520 450 480 Q600 440 800 490 L800 600 L0 600 Z" fill="#ffc66b" opacity="0.06"/>
+  <!-- Dune 3 - mid -->
+  <path d="M0 520 Q120 490 250 510 Q400 540 550 500 Q700 470 800 510 L800 600 L0 600 Z" fill="#e8a838" opacity="0.10"/>
+  <!-- Dune 4 - foreground -->
+  <path d="M0 550 Q150 520 300 545 Q450 570 600 540 Q720 520 800 545 L800 600 L0 600 Z" fill="#e8a838" opacity="0.14"/>
+  <!-- Soft atmospheric layer -->
+  <ellipse cx="400" cy="500" rx="500" ry="100" fill="#ffc66b" opacity="0.04"/>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none">
+  <defs>
+    <radialGradient id="roomLight" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffc66b" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#e8a838" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffc66b" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#e8a838" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blurSoft">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="blurHeavy">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+  <!-- Dim room background -->
+  <rect width="600" height="500" fill="#171305"/>
+  <rect width="600" height="500" fill="url(#roomLight)"/>
+  <!-- Connection lines (melted, organic) -->
+  <path d="M150 200 Q200 150 250 180 Q300 210 350 170" stroke="#ffc66b" stroke-width="1.5" opacity="0.3" fill="none" filter="url(#blurSoft)"/>
+  <path d="M250 180 Q280 250 320 230 Q360 210 400 260" stroke="#e8a838" stroke-width="1" opacity="0.25" fill="none" filter="url(#blurSoft)"/>
+  <path d="M350 170 Q380 140 420 160 Q460 180 500 150" stroke="#ffc66b" stroke-width="1.2" opacity="0.2" fill="none"/>
+  <path d="M150 200 Q180 280 220 300 Q260 320 320 230" stroke="#ffc66b" stroke-width="1" opacity="0.2" fill="none" filter="url(#blurSoft)"/>
+  <path d="M220 300 Q280 340 350 310 Q420 280 480 320" stroke="#e8a838" stroke-width="1.3" opacity="0.3" fill="none"/>
+  <path d="M420 160 Q460 220 480 320" stroke="#ffc66b" stroke-width="0.8" opacity="0.15" fill="none"/>
+  <!-- Node 1 - large melting blob -->
+  <ellipse cx="150" cy="200" rx="45" ry="35" fill="#171305" stroke="#ffc66b" stroke-width="1" opacity="0.7" transform="rotate(-15 150 200)"/>
+  <circle cx="150" cy="192" r="20" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="150" cy="192" r="8" fill="#ffc66b" opacity="0.7"/>
+  <!-- Node 2 -->
+  <ellipse cx="250" cy="180" rx="35" ry="28" fill="#171305" stroke="#e8a838" stroke-width="0.8" opacity="0.6" transform="rotate(10 250 180)"/>
+  <circle cx="250" cy="175" r="15" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="250" cy="175" r="6" fill="#ffc66b" opacity="0.6"/>
+  <!-- Node 3 -->
+  <ellipse cx="350" cy="170" rx="40" ry="32" fill="#171305" stroke="#ffc66b" stroke-width="1.2" opacity="0.65" transform="rotate(-8 350 170)"/>
+  <circle cx="350" cy="162" r="18" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="350" cy="162" r="7" fill="#ffc66b" opacity="0.65"/>
+  <!-- Node 4 -->
+  <ellipse cx="420" cy="160" rx="30" ry="38" fill="#171305" stroke="#ffc66b" stroke-width="0.7" opacity="0.55" transform="rotate(20 420 160)"/>
+  <circle cx="420" cy="155" r="12" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="420" cy="155" r="5" fill="#ffc66b" opacity="0.5"/>
+  <!-- Node 5 - bottom cluster -->
+  <ellipse cx="220" cy="300" rx="38" ry="30" fill="#171305" stroke="#e8a838" stroke-width="1" opacity="0.6" transform="rotate(-5 220 300)"/>
+  <circle cx="220" cy="295" r="14" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="220" cy="295" r="5" fill="#ffc66b" opacity="0.5"/>
+  <!-- Node 6 -->
+  <ellipse cx="320" cy="230" rx="42" ry="34" fill="#171305" stroke="#ffc66b" stroke-width="1.1" opacity="0.7" transform="rotate(12 320 230)"/>
+  <circle cx="320" cy="222" r="20" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="320" cy="222" r="8" fill="#ffc66b" opacity="0.7"/>
+  <!-- Node 7 - large terminal node -->
+  <ellipse cx="480" cy="320" rx="50" ry="40" fill="#171305" stroke="#ffc66b" stroke-width="1.4" opacity="0.7" transform="rotate(-12 480 320)"/>
+  <circle cx="480" cy="312" r="22" fill="url(#nodeGlow)" filter="url(#blurSoft)"/>
+  <circle cx="480" cy="312" r="9" fill="#ffc66b" opacity="0.7"/>
+  <!-- Melting drips from nodes -->
+  <path d="M150 232 Q148 250 153 260" stroke="#ffc66b" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M320 260 Q318 275 322 285" stroke="#ffc66b" stroke-width="1.2" opacity="0.35" fill="none"/>
+  <!-- Ambient particles -->
+  <circle cx="100" cy="150" r="2" fill="#e8a838" opacity="0.3"/>
+  <circle cx="520" cy="120" r="1.5" fill="#ffc66b" opacity="0.25"/>
+  <circle cx="550" cy="250" r="1.8" fill="#e8a838" opacity="0.2"/>
+  <circle cx="80" cy="350" r="2.2" fill="#ffc66b" opacity="0.2"/>
+  <circle cx="300" cy="100" r="1.5" fill="#e8a838" opacity="0.3"/>
+  <!-- Heavy shadow cast across bottom -->
+  <rect x="0" y="400" width="600" height="100" fill="#171305" opacity="0.6"/>
+  <!-- Vignette edges -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="70%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#171305" stop-opacity="0.7"/>
+  </radialGradient>
+  <rect width="600" height="500" fill="url(#vignette)"/>
+</svg>

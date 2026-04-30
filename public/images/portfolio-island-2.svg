@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" fill="none">
+  <defs>
+    <radialGradient id="horizonGlow" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#eac9b4" stop-opacity="0.18"/>
+      <stop offset="40%" stop-color="#eac9b4" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="sphere1Grad" cx="35%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#eac9b4" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#eac9b4" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0.1"/>
+    </radialGradient>
+    <radialGradient id="sphere2Grad" cx="40%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="#eac9b4" stop-opacity="0.7"/>
+      <stop offset="55%" stop-color="#eac9b4" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0.05"/>
+    </radialGradient>
+    <radialGradient id="sphere3Grad" cx="35%" cy="25%" r="65%">
+      <stop offset="0%" stop-color="#ffc66b" stop-opacity="0.5"/>
+      <stop offset="50%" stop-color="#eac9b4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0.05"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="heavyBlur">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <!-- Deep space background -->
+  <rect width="600" height="800" fill="#171305"/>
+  <!-- Infinite horizon glow -->
+  <rect width="600" height="800" fill="url(#horizonGlow)"/>
+  <!-- Horizon line -->
+  <line x1="0" y1="620" x2="600" y2="610" stroke="#eac9b4" stroke-width="0.5" opacity="0.15"/>
+  <!-- Atmospheric haze layers -->
+  <ellipse cx="300" cy="630" rx="400" ry="40" fill="#eac9b4" opacity="0.04" filter="url(#heavyBlur)"/>
+  <!-- Sphere 1 - large, right side, mid-distance -->
+  <circle cx="380" cy="400" r="70" fill="url(#sphere1Grad)" filter="url(#softBlur)"/>
+  <circle cx="380" cy="400" r="70" fill="url(#sphere1Grad)" opacity="0.7"/>
+  <!-- Specular highlight sphere 1 -->
+  <ellipse cx="360" cy="375" rx="20" ry="15" fill="#eac9b4" opacity="0.2" transform="rotate(-20 360 375)"/>
+  <!-- Sphere 2 - medium, left side, floating higher -->
+  <circle cx="180" cy="300" r="50" fill="url(#sphere2Grad)" filter="url(#softBlur)"/>
+  <circle cx="180" cy="300" r="50" fill="url(#sphere2Grad)" opacity="0.65"/>
+  <ellipse cx="165" cy="280" rx="14" ry="10" fill="#eac9b4" opacity="0.18" transform="rotate(-15 165 280)"/>
+  <!-- Sphere 3 - small, center-right, higher -->
+  <circle cx="420" cy="260" r="35" fill="url(#sphere3Grad)" filter="url(#softBlur)"/>
+  <circle cx="420" cy="260" r="35" fill="url(#sphere3Grad)" opacity="0.6"/>
+  <ellipse cx="410" cy="248" rx="10" ry="7" fill="#ffc66b" opacity="0.15" transform="rotate(-25 410 248)"/>
+  <!-- Sphere 4 - tiny, far left, very high -->
+  <circle cx="100" cy="180" r="18" fill="url(#sphere2Grad)" opacity="0.4" filter="url(#softBlur)"/>
+  <!-- Curved floating object - elongated organic shape -->
+  <path d="M250 480 Q300 440 350 460 Q380 470 370 500 Q350 540 290 520 Q250 510 250 480 Z" fill="#eac9b4" opacity="0.08" filter="url(#softBlur)"/>
+  <path d="M260 485 Q300 455 340 470 Q360 478 355 498 Q340 520 300 510 Q265 500 260 485 Z" fill="#eac9b4" opacity="0.12"/>
+  <!-- Subtle light rays from behind horizon -->
+  <path d="M200 610 L150 450 L170 450 Z" fill="#eac9b4" opacity="0.02"/>
+  <path d="M300 610 L280 400 L310 400 Z" fill="#eac9b4" opacity="0.03"/>
+  <path d="M400 610 L430 430 L450 430 Z" fill="#eac9b4" opacity="0.02"/>
+  <!-- Star/dust particles -->
+  <circle cx="120" cy="140" r="1" fill="#eac9b4" opacity="0.3"/>
+  <circle cx="480" cy="120" r="1.2" fill="#eac9b4" opacity="0.25"/>
+  <circle cx="350" cy="90" r="0.8" fill="#eac9b4" opacity="0.2"/>
+  <circle cx="230" cy="160" r="1" fill="#ffc66b" opacity="0.2"/>
+  <circle cx="500" cy="200" r="0.8" fill="#eac9b4" opacity="0.15"/>
+  <circle cx="60" cy="250" r="1.2" fill="#ffc66b" opacity="0.2"/>
+  <circle cx="540" cy="350" r="0.8" fill="#eac9b4" opacity="0.15"/>
+  <!-- Bottom fade to darkness -->
+  <rect x="0" y="700" width="600" height="100" fill="#171305" opacity="0.9"/>
+</svg>

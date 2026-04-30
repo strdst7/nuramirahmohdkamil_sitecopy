@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <linearGradient id="amberFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffc66b" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#e8a838" stop-opacity="0.7"/>
+      <stop offset="70%" stop-color="#ffc66b" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="blueFlow" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a4c9ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a4c9ff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#171305" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="volLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffc66b" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#e8a838" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+    <filter id="meltBlur">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+  <!-- Dark background -->
+  <rect width="800" height="600" fill="#171305"/>
+  <!-- Volumetric light sweep -->
+  <rect width="800" height="600" fill="url(#volLight)" opacity="0.5"/>
+  <!-- Amber liquid mass - main blob -->
+  <path d="M100 400 Q150 200 300 150 Q450 100 550 180 Q650 260 700 400 Q720 500 650 550 Q500 620 350 580 Q200 540 100 400 Z" fill="url(#amberFlow)" filter="url(#meltBlur)" opacity="0.8"/>
+  <!-- Sharper amber form overlay -->
+  <path d="M150 400 Q180 280 300 200 Q420 150 500 220 Q580 290 620 400 Q640 480 580 520 Q450 570 320 540 Q200 500 150 400 Z" fill="url(#amberFlow)" opacity="0.6"/>
+  <!-- Blue liquid mass -->
+  <path d="M400 300 Q500 250 600 280 Q680 320 700 400 Q700 480 620 520 Q550 550 480 520 Q420 480 400 400 Z" fill="url(#blueFlow)" filter="url(#meltBlur)" opacity="0.6"/>
+  <!-- Blue sharper overlay -->
+  <path d="M450 340 Q530 300 580 330 Q630 360 640 410 Q640 460 580 490 Q530 510 480 490 Q440 460 450 410 Z" fill="url(#blueFlow)" opacity="0.5"/>
+  <!-- Amber highlights -->
+  <ellipse cx="320" cy="280" rx="60" ry="30" fill="#ffc66b" opacity="0.15" transform="rotate(-15 320 280)"/>
+  <ellipse cx="280" cy="380" rx="80" ry="25" fill="#e8a838" opacity="0.12" transform="rotate(-10 280 380)"/>
+  <!-- Blue highlights -->
+  <ellipse cx="520" cy="380" rx="50" ry="20" fill="#a4c9ff" opacity="0.15" transform="rotate(10 520 380)"/>
+  <!-- Melting drip paths -->
+  <path d="M180 500 Q170 540 185 570" stroke="#ffc66b" stroke-width="3" opacity="0.3" fill="none" stroke-linecap="round"/>
+  <path d="M600 530 Q610 560 605 580" stroke="#a4c9ff" stroke-width="2.5" opacity="0.25" fill="none" stroke-linecap="round"/>
+  <path d="M380 560 Q375 585 382 600" stroke="#e8a838" stroke-width="2" opacity="0.2" fill="none" stroke-linecap="round"/>
+  <!-- Soft glow center -->
+  <circle cx="400" cy="380" r="120" fill="#ffc66b" opacity="0.04" filter="url(#softGlow)"/>
+  <!-- Bottom fade to dark -->
+  <rect x="0" y="550" width="800" height="50" fill="#171305" opacity="0.8"/>
+</svg>
