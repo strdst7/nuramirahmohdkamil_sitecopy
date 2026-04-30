@@ -65,6 +65,52 @@ export default function HomePage() {
             />
           </div>
         </section>
+
+        {/* Gallery Section — responsive bento grid */}
+        <section className="grid grid-cols-1 md:grid-cols-12 gap-fluid-gap">
+          {/* Card 1: Synaptic Landscapes — spans 8 columns on desktop */}
+          <div className="md:col-span-8 bg-surface-container-low rounded-[2rem_5rem_1rem_3rem] p-8 shadow-[40px_10px_60px_rgba(0,0,0,0.4)] relative overflow-hidden group">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary-container/10 to-transparent z-0" />
+            <div className="relative z-10 h-full flex flex-col justify-between">
+              <div className="flex items-center gap-drip mb-horizon">
+                <Icon name="visibility" className="text-secondary" />
+                <span className="font-label-sm text-label-sm text-secondary tracking-widest uppercase">
+                  Visual Cortex
+                </span>
+              </div>
+              <h2 className="font-headline-md text-headline-md text-on-surface mb-drip">
+                Synaptic Landscapes
+              </h2>
+              <p className="font-body-md text-body-md text-on-surface-variant max-w-md">
+                Generative topographies molded by deep learning models,
+                visualizing thought processes as physical terrain.
+              </p>
+            </div>
+          </div>
+
+          {/* Card 2: Echo Chambers — spans 4 columns on desktop */}
+          <div className="md:col-span-4 bg-surface-container rounded-[4rem_1rem_4rem_1rem] p-8 shadow-[20px_20px_50px_rgba(0,0,0,0.6)] flex flex-col justify-end min-h-[300px] relative border border-outline-variant/30">
+            {/* Background image fill */}
+            <div className="absolute inset-0 rounded-[4rem_1rem_4rem_1rem] overflow-hidden">
+              <Image
+                src="/images/home-hero-bg.svg"
+                alt="Abstract liquid flowing shapes in warm amber and cool blue tones"
+                fill
+                className="object-cover opacity-30"
+                style={{ mixBlendMode: "luminosity" as React.CSSProperties["mixBlendMode"] }}
+              />
+            </div>
+            <div className="relative z-10">
+              <h3 className="font-headline-md text-headline-md text-tertiary">
+                Echo Chambers
+              </h3>
+              <button className="mt-drip bg-primary/20 text-primary font-label-sm text-label-sm px-6 py-3 rounded-[50%_50%_50%_50%] backdrop-blur-sm border border-primary/30 hover:scale-105 transition-transform">
+                Explore
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
