@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { articles } from "@/data/insights";
 import { Icon } from "@/components/Icon";
 import type { IconName } from "@/components/Icon";
@@ -91,9 +92,42 @@ export default function InsightsPage() {
             </div>
           </div>
 
-          {/* Right Column: Diagram (Task 2 placeholder) */}
+          {/* Right Column: Surreal Diagram */}
           <div className="md:col-span-5 flex flex-col gap-16 mt-16 md:mt-40">
-            {/* diagram card goes here — add in task 2 */}
+            {/* Diagram Card */}
+            <figure className="relative w-full rounded-t-[40%] rounded-b-[2rem] overflow-hidden
+                                 shadow-[20px_40px_80px_rgba(0,0,0,0.8)] border border-outline/10 group">
+              <div className="relative w-full h-[500px]">
+                <Image
+                  src={articles[0].diagramSrc}
+                  alt={articles[0].diagramAlt}
+                  fill
+                  className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms] ease-out"
+                  style={
+                    { mixBlendMode: "luminosity" } as React.CSSProperties
+                  }
+                />
+              </div>
+              <figcaption className="absolute bottom-0 w-full bg-surface-container-highest/80 backdrop-blur-xl
+                                      p-8 pt-12 rounded-t-[3rem] transform translate-y-4
+                                      group-hover:translate-y-0 transition-transform duration-700">
+                <div className="flex items-center gap-4 mb-2">
+                  <Icon
+                    name="all_inclusive"
+                    size={20}
+                    fill={1}
+                    className="text-primary"
+                  />
+                  <span className="font-label-sm text-label-sm text-primary uppercase tracking-widest">
+                    Fig 1. Latent Topography
+                  </span>
+                </div>
+                <p className="font-body-md text-body-md text-on-surface-variant">
+                  Visualization of gradient descent becoming trapped in a local
+                  minimum that physically resembles an endless, echoing hallway.
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </main>
