@@ -13,9 +13,9 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 | Property | Value |
 |----------|-------|
-| Current Phase | 1 — Foundation ✓ Complete |
-| Next Phase | 2 — Content Pages |
-| Total Phases | 4 |
+| Current Phase | 3 — AI Playground ✓ Complete |
+| Next Phase | 4 — Lead Capture & Deploy |
+| Total Phases | 5 |
 | v1 Requirements | 21 (all mapped) |
 | Config | Coarse granularity, parallel execution, smart model profile, YOLO mode |
 
@@ -24,9 +24,10 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 | Phase | Name | Status | Plans | Progress |
 |-------|------|--------|-------|----------|
 | 1 | Foundation | ✓ Complete | 1/1 | 100% |
-| 2 | Content Pages | ○ Pending | 0/0 | 0% |
-| 3 | AI Playground | ○ Pending | 0/0 | 0% |
+| 2 | Content Pages | ✓ Complete | 4/4 | 100% |
+| 3 | AI Playground | ✓ Complete | 2/2 | 100% |
 | 4 | Lead Capture & Deploy | ○ Pending | 0/0 | 0% |
+| 5 | 3 | ○ Pending | 0/0 | 0% |
 
 ## Key Decisions Made
 
@@ -34,6 +35,8 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 - Surrealist Echoes canonical design system; Blueprint retired
 - Self-hosted variable fonts via `next/font/google`
 - `src/` directory structure, flat `src/components/` for shared components
+- Navigation labels: semantic (Home, Insights, Playground, Portfolio) — not prototype poetic labels
+- Brand identity: "NUR AMIRAH MOHD KAMIL" canonical across all pages
 
 ## Artifacts
 
@@ -48,10 +51,31 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 | Phase 1 UI-SPEC | `.planning/phases/01-foundation/01-UI-SPEC.md` | ✓ |
 | Phase 1 Plan | `.planning/phases/01-foundation/01-PLAN.md` | ✓ |
 | Phase 1 Summary | `.planning/phases/01-foundation/01-SUMMARY.md` | ✓ |
+| Phase 2 Context | `.planning/phases/02-content-pages/02-CONTEXT.md` | ✓ |
+| Phase 2 Discussion Log | `.planning/phases/02-content-pages/02-DISCUSSION-LOG.md` | ✓ |
+| Phase 2 Plan 01 | `.planning/phases/02-content-pages/02-01-PLAN.md` | ✓ |
+| Phase 2 Summary 01 | `.planning/phases/02-content-pages/02-01-SUMMARY.md` | ✓ |
+| Phase 2 Plan 02 | `.planning/phases/02-content-pages/02-02-PLAN.md` | ✓ |
+| Phase 2 Summary 02 | `.planning/phases/02-content-pages/02-02-SUMMARY.md` | ✓ |
+| Phase 2 Plan 03 | `.planning/phases/02-content-pages/02-03-PLAN.md` | ✓ |
+| Phase 2 Summary 03 | `.planning/phases/02-content-pages/02-03-SUMMARY.md` | ✓ |
+| Phase 2 Plan 04 | `.planning/phases/02-content-pages/02-04-PLAN.md` | ✓ |
+| Phase 2 Summary 04 | `.planning/phases/02-content-pages/02-04-SUMMARY.md` | ✓ |
+| Phase 3 Context | `.planning/phases/03-ai-playground/03-CONTEXT.md` | ✓ |
+| Phase 3 Plan 01 | `.planning/phases/03-ai-playground/03-01-PLAN.md` | ✓ |
+| Phase 3 Plan 02 | `.planning/phases/03-ai-playground/03-02-PLAN.md` | ✓ |
+| Phase 3 Summary 01 | `.planning/phases/03-ai-playground/03-01-SUMMARY.md` | ✓ |
+| Phase 3 Summary 02 | `.planning/phases/03-ai-playground/03-02-SUMMARY.md` | ✓ |
 
 ## Next Action
 
-Run `/gsd-discuss-phase 2` to gather context for Phase 2 — Content Pages.
+Run `/gsd-plan-phase 4` to plan Phase 4 — Lead Capture & Deploy.
+
+## Accumulated Context
+
+### Roadmap Evolution
+
+- Phase 5 added: 3
 
 ---
-*Last updated: 30 April 2026 after Phase 1 completion*
+*Last updated: 01 May 2026 after Phase 5 added to roadmap*

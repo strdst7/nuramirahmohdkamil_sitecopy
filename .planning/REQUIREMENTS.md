@@ -92,12 +92,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DSGN-04 | Phase 2 | Pending |
 | INFR-02 | Phase 2 | Pending |
 | INFR-03 | Phase 2 | Pending |
-| PAGE-04 | Phase 3 | Pending |
-| PLAY-01 | Phase 3 | Pending |
-| PLAY-02 | Phase 3 | Pending |
-| PLAY-03 | Phase 3 | Pending |
-| PLAY-04 | Phase 3 | Pending |
-| PLAY-05 | Phase 3 | Pending |
+| PAGE-04 | Phase 3 | ✓ Complete |
+| PLAY-01 | Phase 3 | ✓ Complete |
+| PLAY-02 | Phase 3 | ✓ Complete |
+| PLAY-03 | Phase 3 | ✓ Complete |
+| PLAY-04 | Phase 3 | ✓ Complete |
+| PLAY-05 | Phase 3 | ✓ Complete |
 | LEAD-01 | Phase 4 | Pending |
 | LEAD-02 | Phase 4 | Pending |
 | LEAD-03 | Phase 4 | Pending |

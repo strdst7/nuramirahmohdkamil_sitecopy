@@ -1,7 +1,7 @@
 # Roadmap: Nur Amirah Portfolio & AI Playground
 
 **Created:** 30 April 2026
-**Granularity:** Coarse (4 phases)
+**Granularity:** Coarse (5 phases)
 **Core Value:** Emotional resonance over rigid utility
 
 ## Phase Overview
@@ -12,10 +12,10 @@
 | 2 | Content Pages | Build Home, Insights, and Portfolio pages with responsive layouts and SEO | PAGE-02, PAGE-03, PAGE-05, DSGN-04, INFR-02, INFR-03 | 4 |
 | 3 | AI Playground | Live AI integration with OpenAI and Gemini behind secure API routes | PAGE-04, PLAY-01, PLAY-02, PLAY-03, PLAY-04, PLAY-05 | 4 |
 | 4 | Lead Capture & Deploy | Supabase lead capture form and Vercel production deployment | LEAD-01, LEAD-02, LEAD-03, INFR-04 | 3 |
+| 5 | 3 | [To be planned] | TBD | TBD |
 
-**4 phases** | **21 requirements mapped** | All v1 requirements covered
+**5 phases** | **21 requirements mapped** | All v1 requirements covered
 
----
 
 ## Phase 1: Foundation
 
@@ -46,6 +46,14 @@
 **Goal:** Port the Home, Insights, and Portfolio HTML prototypes into functioning Next.js pages with responsive layouts, local image assets, and SEO metadata. The Surrealist Echoes aesthetic must be faithfully reproduced from the prototypes.
 
 **Requirements:** PAGE-02, PAGE-03, PAGE-05, DSGN-04, INFR-02, INFR-03
+
+**Plans:** 4 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Data layer, local image assets, sitemap/robots, Footer DREAM_VOID tagline (INFR-02, INFR-03)
+- [ ] 02-02-PLAN.md — Home page: hero, bento gallery, responsive layout, SEO metadata (PAGE-02, DSGN-04, INFR-03)
+- [ ] 02-03-PLAN.md — Insights page: journal articles, surreal diagram, asymmetric layout, SEO metadata (PAGE-03, DSGN-04, INFR-03)
+- [ ] 02-04-PLAN.md — Portfolio page: drifting islands, organic shapes, responsive grid, SEO metadata (PAGE-05, DSGN-04, INFR-03)
 
 **Success criteria:**
 1. Home page renders the hero elevator pitch in Epilogue headline typography with the visual terminal preview and CTA buttons — layout adapts from single-column (mobile) to split-screen (desktop)
@@ -142,4 +150,24 @@ Phase 2 (Content Pages) ──► Phase 3 (AI Playground)
 | Tailwind CDN config doesn't map 1:1 to build-time | 🟡 Low | Phase 1 | Manual token extraction from prototypes |
 
 ---
+
+## Phase 5: 3
+
+**Goal:** [To be planned]
+
+**Requirements**: TBD
+
+**Depends on:** Phase 4
+
+**Plans:** 2 plans
+
+Plans:
+- [x] 03-01-PLAN.md — API routes: OpenAI streaming, Gemini multimodal, security verification (PLAY-01, PLAY-02, PLAY-05)
+- [x] 03-02-PLAN.md — Playground page: terminal UI, parameter sliders, output basin, loader (PAGE-04, PLAY-03, PLAY-04)
+
+Plans:
+- [ ] TBD (run /gsd-plan-phase 5 to break down)
+
+---
+
 *Roadmap created: 30 April 2026*
