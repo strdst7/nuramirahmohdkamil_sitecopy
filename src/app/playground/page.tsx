@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { Icon } from "@/components/Icon";
 import { GlassPanel } from "@/components/GlassPanel";
 import { MeltingShadow } from "@/components/MeltingShadow";
+import { LeadCaptureForm } from "@/components/LeadCaptureForm";
 
 type Model = "openai" | "gemini";
 
@@ -537,6 +538,25 @@ export default function PlaygroundPage() {
           </div>
         </GlassPanel>
       </aside>
+
+      {/* Divider between playground and lead capture */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent mt-12 lg:mt-20" />
+
+      {/* Lead Capture — per D-01: form adjacent to playground where AI drives interest */}
+      <section className="w-full mt-16 lg:mt-24">
+        <div className="max-w-2xl mx-auto">
+          <header className="mb-8 text-center">
+            <h2 className="font-headline-md text-headline-md text-primary mb-2">
+              Transmute Interest Into Form
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant opacity-80 italic max-w-xl mx-auto">
+              The alchemist does not hoard the philosopher&apos;s stone. Share
+              your intent, and we&apos;ll craft something extraordinary together.
+            </p>
+          </header>
+          <LeadCaptureForm />
+        </div>
+      </section>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { BottomNavDock } from "@/components/BottomNavDock";
 import { Footer } from "@/components/Footer";
+import { VercelProviders } from "@/components/VercelProviders";
 
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -53,6 +54,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <BottomNavDock />
         <Footer />
+        <VercelProviders />
       </body>
     </html>
   );
