@@ -19,11 +19,17 @@ export type IconName =
   | "flare"
   | "thermostat"
   | "filter_vintage"
-  | "blur_circular";
+  | "blur_circular"
+  | "send"
+  | "mail"
+  | "chat"
+  | "flag"
+  | "check_circle"
+  | "person";
 
 type IconProps = {
   name: IconName;
-  size?: 14 | 16 | 20 | 24 | 32 | 36 | 48;
+  size?: 14 | 16 | 18 | 20 | 24 | 32 | 36 | 48;
   fill?: 0 | 1;
   weight?: 100 | 200 | 300 | 400 | 500 | 600 | 700;
   className?: string;
