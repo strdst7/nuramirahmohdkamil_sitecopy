@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 | 1 | Foundation | ✓ Complete | 1/1 | 100% |
 | 2 | Content Pages | ✓ Complete | 4/4 | 100% |
 | 3 | AI Playground | ✓ Complete | 2/2 | 100% |
-| 4 | Lead Capture & Deploy | ○ Pending | 0/0 | 0% |
+| 4 | Lead Capture & Deploy | ◆ Planned | 0/3 | 0% |
 | 5 | 3 | ○ Pending | 0/0 | 0% |
 
 ## Key Decisions Made
@@ -69,7 +69,7 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 ## Next Action
 
-Run `/gsd-plan-phase 4` to plan Phase 4 — Lead Capture & Deploy.
+Run `/gsd-execute-phase 4` to execute Phase 4 — Lead Capture & Deploy.
 
 ## Accumulated Context
 

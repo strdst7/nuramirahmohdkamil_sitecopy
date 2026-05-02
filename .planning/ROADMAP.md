@@ -120,6 +120,13 @@ Plans:
 - Run production build and verify all routes, API calls, and forms work in production
 - Set up Vercel Analytics for basic traffic monitoring
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Supabase client, POST /api/leads route, env var documentation (LEAD-02, LEAD-03)
+- [ ] 04-02-PLAN.md — LeadCaptureForm component with Zod validation, Surrealist Echoes styling (LEAD-01, LEAD-03)
+- [ ] 04-03-PLAN.md — Playground integration, Vercel deployment, analytics, production build (LEAD-01, INFR-04)
+
 **UI hint:** yes
 
 ---
