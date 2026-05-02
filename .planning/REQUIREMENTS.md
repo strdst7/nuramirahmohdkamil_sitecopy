@@ -98,10 +98,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PLAY-03 | Phase 3 | ✓ Complete |
 | PLAY-04 | Phase 3 | ✓ Complete |
 | PLAY-05 | Phase 3 | ✓ Complete |
-| LEAD-01 | Phase 4 | Pending |
-| LEAD-02 | Phase 4 | Pending |
-| LEAD-03 | Phase 4 | Pending |
-| INFR-04 | Phase 4 | Pending |
+| LEAD-01 | Phase 4 | ✓ Complete |
+| LEAD-02 | Phase 4 | ✓ Complete |
+| LEAD-03 | Phase 4 | ✓ Complete |
+| INFR-04 | Phase 4 | ✓ Complete |
 
 **Coverage:**
 - v1 requirements: 21 total

@@ -13,8 +13,8 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 | Property | Value |
 |----------|-------|
-| Current Phase | 3 — AI Playground ✓ Complete |
-| Next Phase | 4 — Lead Capture & Deploy |
+| Current Phase | 4 — Lead Capture & Deploy ✓ Complete |
+| Next Phase | 5 — 3 |
 | Total Phases | 5 |
 | v1 Requirements | 21 (all mapped) |
 | Config | Coarse granularity, parallel execution, smart model profile, YOLO mode |
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 | 1 | Foundation | ✓ Complete | 1/1 | 100% |
 | 2 | Content Pages | ✓ Complete | 4/4 | 100% |
 | 3 | AI Playground | ✓ Complete | 2/2 | 100% |
-| 4 | Lead Capture & Deploy | ◆ Planned | 0/3 | 0% |
+| 4 | Lead Capture & Deploy | ✓ Complete | 3/3 | 100% |
 | 5 | 3 | ○ Pending | 0/0 | 0% |
 
 ## Key Decisions Made
@@ -69,7 +69,7 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 ## Next Action
 
-Run `/gsd-execute-phase 4` to execute Phase 4 — Lead Capture & Deploy.
+Run `/gsd-complete-milestone` to archive Phase 1-4 and prepare for the next milestone.
 
 ## Accumulated Context
 
