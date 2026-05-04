@@ -4,10 +4,10 @@ import { Icon } from "@/components/Icon";
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/20">
-      <div className="flex items-center justify-between px-horizon py-drip max-w-7xl mx-auto">
+      <div className="flex flex-col items-center gap-2 px-horizon py-3 max-w-7xl mx-auto">
         <Link
           href="/"
-          className="font-headline-lg text-headline-lg tracking-tight drop-shadow-[0_10px_20px_rgba(232,168,56,0.3)] hover:opacity-80 transition-opacity"
+          className="font-headline-md text-headline-md tracking-tight drop-shadow-[0_10px_20px_rgba(232,168,56,0.3)] hover:opacity-80 transition-opacity"
         >
           NUR_AMIRAH_MOHD_KAMIL
         </Link>
