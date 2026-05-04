@@ -2,9 +2,7 @@
 
 ## What This Is
 
-A personal portfolio website for Nur Amirah Mohd Kamil that bridges creative direction with technical experimentation. The site serves dual purposes: (1) a showcase of creative work, insights, and professional identity — styled as an avant-garde surrealist experience, and (2) an interactive AI playground where visitors can experiment with generative AI tools (text generation, multimodal analysis) through a visually striking terminal interface. Lead capture for white-label services, beta access, and update notifications is built into the playground.
-
-The target audience includes avant-garde creators, boutique curators, experimental storytellers, and potential clients seeking AI consultancy or creative direction.
+A personal portfolio website that bridges creative direction with technical experimentation. The site showcases creative work through a surrealist dreamlike experience and provides an interactive AI playground where visitors experiment with generative AI (OpenAI text generation, Gemini multimodal analysis). Lead capture for white-label services, beta access, and update notifications is integrated into the playground.
 
 ## Core Value
 
@@ -12,86 +10,66 @@ The target audience includes avant-garde creators, boutique curators, experiment
 
 ## Requirements
 
-### Validated
+### Validated (v1.0 — shipped 2026-05-01)
 
-- ✓ Static HTML prototype pages exist for all 5 planned sections — existing
-- ✓ "Surrealist Echoes" design system defined and prototyped (colors, typography, shapes, components) — existing
-- ✓ Tailwind CSS CDN configuration pattern established across all pages — existing
-- ✓ AI Playground terminal UI concept prototyped with prime-directive input, sliders, output basin — existing
-- ✓ Portfolio "drifting islands" / organic blob card layout prototyped — existing
-- ✓ Insights page styled as academic journal entries — existing
+- ✓ 5 pages (Home, Insights, Playground, Portfolio, Surrealist Echoes design reference)
+- ✓ Surrealist Echoes design system — 46 color tokens, typography scale, spacing, organic shapes
+- ✓ Next.js 16 App Router with TypeScript and Tailwind CSS (build-time)
+- ✓ Self-hosted fonts via next/font (Epilogue, Newsreader, Space Grotesk) + Material Symbols
+- ✓ 7 shared components (GlassPanel, OrganicCard, DripBorder, PulseButton, MeltingShadow, Icon, LeadCaptureForm)
+- ✓ AI Playground — OpenAI (SSE streaming) + Gemini (multimodal) behind secure proxy routes
+- ✓ Lead capture form — Zod-validated, Supabase-powered, Surrealist Echoes styling
+- ✓ Responsive layout — mobile single-column → tablet 2-column → desktop asymmetric
+- ✓ SEO metadata, sitemap.xml, robots.txt
+- ✓ Vercel deployment config + Docker support
+- ✓ Local image assets (SVG placeholders) — zero external CDN dependencies
+- ✓ 21/21 v1 requirements shipped
 
-### Active
+### Active (v2.0 planning)
 
-- [ ] Convert static HTML prototypes into a unified Next.js (App Router) application
-- [ ] Implement shared layout with global navigation linking all 5 pages
-- [ ] Build AI Playground with live OpenAI + Gemini API integration via secure backend proxy routes
-- [ ] Implement lead capture form connected to Supabase database
-- [ ] Port Surrealist Echoes design system from inline Tailwind CDN to build-time Tailwind config
-- [ ] Add responsive/mobile layouts (prototypes are desktop-only)
-- [ ] Add SEO metadata, sitemap, and performance optimization
-- [ ] Deploy to Vercel with Edge Functions for API routes
+- [ ] Headless CMS integration for Insights blog (Contentful or similar)
+- [ ] Portfolio project management via CMS
+- [ ] API routing logic — select fastest/cheapest AI provider per request
+- [ ] Saved prompt history and session replay
+- [ ] Email notification to site owner on new lead
+- [ ] Newsletter signup
 
 ### Out of Scope
 
-- CMS-driven content management — v1 uses hardcoded content, CMS deferred
 - User authentication / login system — site is public-facing showcase
-- Real-time collaboration features — solo portfolio
 - E-commerce / payment processing — lead capture only
+- Real-time chat or WebSockets — not core to portfolio value
 - Mobile native app — web-only for v1
+- Multi-language / i18n — English-only for v1
 
 ## Context
 
-**Current state:** The project consists of 5 static HTML prototype pages, each in its own directory following the convention `[pagetype]_[page_title]`:
-- `home_the_persistence_of_intelligence/` — Hero landing page
-- `insights_ethereal_inquiries/` — Blog/insights journal entries
-- `playground_alchemist_s_terminal/` — Interactive AI terminal demo
-- `portfolio_archive_of_dreams/` — Project showcase with organic layouts
-- `surrealist_echoes/` — Design system definition (the canonical visual language)
+**Shipped v1.0:** ~2,400 LOC TypeScript/TSX across 10 phases (4 planning phases, 10 plans).
 
-Each page is a self-contained HTML file with inline Tailwind CDN config, Google Fonts (Epilogue, Newsreader, Space Grotesk), and Material Symbols icons. Pages share no code — every page redefines the full config independently.
+**Tech stack:** Next.js 16 App Router, TypeScript, Tailwind CSS 3 (build-time), Vercel hosting, Supabase (PostgreSQL for leads), OpenAI (gpt-4o-mini) + Gemini (2.0-flash) proxied through server-side API routes.
 
-**Design system:** Two design documents exist:
-1. `DESIGN.md` — "Blueprint" design (IBM Carbon-inspired, grid-based, structural, Rose Quartz + Soft Cobalt palette)
-2. `surrealist_echoes/DESIGN.md` — "Surrealist Echoes" (dark amber/gold desert palette, melting organic shapes, glassmorphism, asymmetric fluid layouts) — **this is the canonical system actually implemented in all HTML prototypes**
+**Current state:** All 5 pages rendered with Surrealist Echoes design system. AI Playground functional with streaming text generation and multimodal image analysis. Lead capture form live on /playground. Production build passes (13 static + 3 dynamic routes). Docker-ready with standalone output mode.
 
-The planned architecture (`SOFTWARE_DESIGN_SPECIFICATION.md`) references the Blueprint aesthetic, but the prototypes exclusively use Surrealist Echoes. The production app should follow Surrealist Echoes.
-
-**Planned architecture:** Next.js App Router + React + Tailwind CSS (build-time) + Vercel hosting + Supabase (PostgreSQL for leads) + OpenAI & Gemini APIs proxied through Next.js API routes.
+**Deployment:** Configure `.env.local` with API keys → `npm run dev` or `docker compose up -d`. See README.md for full instructions.
 
 ## Constraints
 
 - **Tech stack**: Next.js App Router, TypeScript, Tailwind CSS (build-time), Vercel, Supabase
-- **Design**: Must follow Surrealist Echoes design system (surrealist_echoes/DESIGN.md)
-- **AI APIs**: Never expose API keys to client — all AI calls must proxy through Next.js API routes
-- **Performance**: Dark theme with glassmorphism/blur effects requires modern browser support
-- **Content**: Hardcoded in v1 — no CMS dependency
+- **Design**: Must follow Surrealist Echoes design system
+- **AI APIs**: Never expose API keys to client — all AI calls proxy through Next.js API routes
+- **Content**: Hardcoded in v1 — CMS deferred to v2
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Surrealist Echoes over Blueprint | All HTML prototypes use Surrealist Echoes; Blueprint doc appears to be earlier concept superseded by Surrealist Echoes | — Pending |
-| Next.js App Router over Pages Router | Modern standard for new Next.js projects; App Router aligns with SOFTWARE_DESIGN_SPECIFICATION.md | — Pending |
-| Coarse granularity (3-5 phases) | Portfolio site is well-scoped; excessive phases add overhead without benefit | — Pending |
-| Smart model profile (2 models) | Research/planning gets a reasoning model; execution/verification gets a fast model | — Pending |
-
-## Evolution
-
-This document evolves at phase transitions and milestone boundaries.
-
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
-
-**After each milestone** (via `/gsd-complete-milestone`):
-1. Full review of all sections
-2. Core Value check — still the right priority?
-3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
+| Surrealist Echoes over Blueprint | All HTML prototypes use Surrealist Echoes | ✓ Shipped — canonical design system |
+| Next.js App Router over Pages Router | Modern standard; aligns with architecture spec | ✓ Shipped — 10 routes working |
+| Coarse granularity (4 phases) | Portfolio site well-scoped | ✓ Shipped — 10 plans across 4 phases |
+| Server-side AI proxy routes | Prevents API key leakage to client | ✓ Verified — zero key exposure in bundles |
+| Zod v4 for form validation | Type-safe validation, transitive dep via openai | ✓ Shipped — added as direct dependency |
+| Supabase service role key | Server-to-server inserts, no client auth needed | ✓ Shipped — lazy init avoids build crash |
+| Standalone output mode | Docker production build optimization | ✓ Shipped — multi-stage Dockerfile |
 
 ---
-*Last updated: 30 April 2026 after initialization*
+*Last updated: 01 May 2026 after v1.0 milestone*
