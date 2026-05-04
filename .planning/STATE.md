@@ -13,9 +13,9 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 | Property | Value |
 |----------|-------|
-| Current Phase | 4 — Lead Capture & Deploy ✓ Complete |
-| Next Phase | 5 — 3 |
-| Total Phases | 5 |
+| Current Phase | Milestone v1.0 ✓ Shipped |
+| Next Phase | v2.0 — TBD |
+| Total Phases | 4 (all complete) |
 | v1 Requirements | 21 (all mapped) |
 | Config | Coarse granularity, parallel execution, smart model profile, YOLO mode |
 
@@ -69,7 +69,7 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 
 ## Next Action
 
-Run `/gsd-complete-milestone` to archive Phase 1-4 and prepare for the next milestone.
+Run `/gsd-new-milestone` to define v2.0 scope — questioning → research → requirements → roadmap.
 
 ## Accumulated Context
 
@@ -78,4 +78,4 @@ Run `/gsd-complete-milestone` to archive Phase 1-4 and prepare for the next mile
 - Phase 5 added: 3
 
 ---
-*Last updated: 01 May 2026 after Phase 5 added to roadmap*
+*Last updated: 01 May 2026 after v1.0 milestone*
