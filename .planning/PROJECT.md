@@ -25,8 +25,11 @@ A personal portfolio website that bridges creative direction with technical expe
 - ✓ Local image assets (SVG placeholders) — zero external CDN dependencies
 - ✓ 21/21 v1 requirements shipped
 
-### Active (v2.0 planning)
+### Current Milestone: v2.0 CMS & AI Intelligence
 
+**Goal:** Transform the static portfolio into a dynamic, intelligent platform — CMS-powered content, smarter AI routing, prompt history, and automated visitor engagement.
+
+**Target features:**
 - [ ] Headless CMS integration for Insights blog (Contentful or similar)
 - [ ] Portfolio project management via CMS
 - [ ] API routing logic — select fastest/cheapest AI provider per request
@@ -71,5 +74,22 @@ A personal portfolio website that bridges creative direction with technical expe
 | Supabase service role key | Server-to-server inserts, no client auth needed | ✓ Shipped — lazy init avoids build crash |
 | Standalone output mode | Docker production build optimization | ✓ Shipped — multi-stage Dockerfile |
 
+## Evolution
+
+This document evolves at phase transitions and milestone boundaries.
+
+**After each phase transition** (via `/gsd-transition`):
+1. Requirements invalidated? → Move to Out of Scope with reason
+2. Requirements validated? → Move to Validated with phase reference
+3. New requirements emerged? → Add to Active
+4. Decisions to log? → Add to Key Decisions
+5. "What This Is" still accurate? → Update if drifted
+
+**After each milestone** (via `/gsd-complete-milestone`):
+1. Full review of all sections
+2. Core Value check — still the right priority?
+3. Audit Out of Scope — reasons still valid?
+4. Update Context with current state
+
 ---
-*Last updated: 01 May 2026 after v1.0 milestone*
+*Last updated: 06 May 2026 after starting v2.0 milestone*

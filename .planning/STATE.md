@@ -5,29 +5,24 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 30 April 2026)
+See: .planning/PROJECT.md (updated 06 May 2026)
 
 **Core value:** Emotional resonance over rigid utility — a dreamlike portfolio that sparks curiosity while delivering functional AI tools and lead conversion.
 
-## Current State
+## Current Position
 
-| Property | Value |
-|----------|-------|
-| Current Phase | Milestone v1.0 ✓ Shipped |
-| Next Phase | v2.0 — TBD |
-| Total Phases | 4 (all complete) |
-| v1 Requirements | 21 (all mapped) |
-| Config | Coarse granularity, parallel execution, smart model profile, YOLO mode |
+Phase: 5 — CMS Integration (next)
+Plan: —
+Status: Roadmap approved — ready for Phase 5 discussion
+Last activity: 06 May 2026 — Milestone v2.0 roadmap created
 
 ## Phase Progress
 
 | Phase | Name | Status | Plans | Progress |
 |-------|------|--------|-------|----------|
-| 1 | Foundation | ✓ Complete | 1/1 | 100% |
-| 2 | Content Pages | ✓ Complete | 4/4 | 100% |
-| 3 | AI Playground | ✓ Complete | 2/2 | 100% |
-| 4 | Lead Capture & Deploy | ✓ Complete | 3/3 | 100% |
-| 5 | 3 | ○ Pending | 0/0 | 0% |
+| 5 | CMS Integration | ○ Pending | 0/0 | 0% |
+| 6 | Engagement | ○ Pending | 0/0 | 0% |
+| 7 | AI Intelligence | ○ Pending | 0/0 | 0% |
 
 ## Key Decisions Made
 
@@ -45,37 +40,17 @@ See: .planning/PROJECT.md (updated 30 April 2026)
 | Project Context | `.planning/PROJECT.md` | ✓ |
 | Configuration | `.planning/config.json` | ✓ |
 | Codebase Map | `.planning/codebase/` (7 docs) | ✓ |
+| Research | `.planning/research/` (5 files) | ✓ |
 | Requirements | `.planning/REQUIREMENTS.md` | ✓ |
 | Roadmap | `.planning/ROADMAP.md` | ✓ |
-| Phase 1 Context | `.planning/phases/01-foundation/01-CONTEXT.md` | ✓ |
-| Phase 1 UI-SPEC | `.planning/phases/01-foundation/01-UI-SPEC.md` | ✓ |
-| Phase 1 Plan | `.planning/phases/01-foundation/01-PLAN.md` | ✓ |
-| Phase 1 Summary | `.planning/phases/01-foundation/01-SUMMARY.md` | ✓ |
-| Phase 2 Context | `.planning/phases/02-content-pages/02-CONTEXT.md` | ✓ |
-| Phase 2 Discussion Log | `.planning/phases/02-content-pages/02-DISCUSSION-LOG.md` | ✓ |
-| Phase 2 Plan 01 | `.planning/phases/02-content-pages/02-01-PLAN.md` | ✓ |
-| Phase 2 Summary 01 | `.planning/phases/02-content-pages/02-01-SUMMARY.md` | ✓ |
-| Phase 2 Plan 02 | `.planning/phases/02-content-pages/02-02-PLAN.md` | ✓ |
-| Phase 2 Summary 02 | `.planning/phases/02-content-pages/02-02-SUMMARY.md` | ✓ |
-| Phase 2 Plan 03 | `.planning/phases/02-content-pages/02-03-PLAN.md` | ✓ |
-| Phase 2 Summary 03 | `.planning/phases/02-content-pages/02-03-SUMMARY.md` | ✓ |
-| Phase 2 Plan 04 | `.planning/phases/02-content-pages/02-04-PLAN.md` | ✓ |
-| Phase 2 Summary 04 | `.planning/phases/02-content-pages/02-04-SUMMARY.md` | ✓ |
-| Phase 3 Context | `.planning/phases/03-ai-playground/03-CONTEXT.md` | ✓ |
-| Phase 3 Plan 01 | `.planning/phases/03-ai-playground/03-01-PLAN.md` | ✓ |
-| Phase 3 Plan 02 | `.planning/phases/03-ai-playground/03-02-PLAN.md` | ✓ |
-| Phase 3 Summary 01 | `.planning/phases/03-ai-playground/03-01-SUMMARY.md` | ✓ |
-| Phase 3 Summary 02 | `.planning/phases/03-ai-playground/03-02-SUMMARY.md` | ✓ |
-
-## Next Action
-
-Run `/gsd-new-milestone` to define v2.0 scope — questioning → research → requirements → roadmap.
+| v1.0 Archive | `.planning/milestones/v1.0-*` | ✓ |
 
 ## Accumulated Context
 
 ### Roadmap Evolution
 
-- Phase 5 added: 3
+- v2.0: 3 phases (5-7), 16 requirements
+- v1.0: 4 phases (1-4), 10 plans, 21/21 requirements shipped
 
 ---
-*Last updated: 01 May 2026 after v1.0 milestone*
+*Last updated: 06 May 2026 after v2.0 roadmap creation*
