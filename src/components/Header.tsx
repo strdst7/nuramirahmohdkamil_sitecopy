@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Icon } from "@/components/Icon";
+
+const subtitles: Record<string, string> = {
+  Home: "The_Void",
+  Insights: "Ethereal Enquiries",
+  Playground: "The Alchemist's Terminal",
+  Portfolio: "The Archive of Dreams",
+  Design: "Surrealist Echoes",
+};
 
 export function Header() {
   return (
@@ -27,9 +34,12 @@ function NavLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]"
+      className="group flex flex-col items-center font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors uppercase tracking-[0.1em]"
     >
-      {label}
+      <span>{label}</span>
+      <span className="block overflow-hidden max-h-0 group-hover:max-h-4 opacity-0 group-hover:opacity-70 transition-all duration-300 ease-out text-[0.6rem] font-light normal-case tracking-wider text-primary/70 pt-0.5">
+        {subtitles[label]}
+      </span>
     </Link>
   );
 }
