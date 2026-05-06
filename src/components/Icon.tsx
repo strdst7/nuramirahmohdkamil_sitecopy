@@ -14,6 +14,7 @@ export type IconName =
   | "all_inclusive"
   | "bubble_chart"
   | "east"
+  | "west"
   | "hive"
   | "psychology"
   | "flare"
