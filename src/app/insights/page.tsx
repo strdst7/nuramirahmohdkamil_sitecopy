@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { articles } from "@/data/insights";
+import { fetchArticles } from "@/lib/contentful";
 import { Icon } from "@/components/Icon";
 import type { IconName } from "@/components/Icon";
+
+export const revalidate = 3600; // ISR: revalidate every 1 hour (per D-05)
 
 export const metadata: Metadata = {
   title: "Ethereal Inquiries",
@@ -16,7 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function InsightsPage() {
+export default async function InsightsPage() {
+  const articles = await fetchArticles();
+
   return (
     <div className="relative overflow-hidden">
       {/* Ambient Background Blur Elements */}
