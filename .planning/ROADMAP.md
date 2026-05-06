@@ -60,6 +60,13 @@ Plans:
 3. Newsletter form accepts email, rejects duplicates with friendly message
 4. Subscriber can unsubscribe via unique token link and removed from active list
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 06-01-PLAN.md — Email infrastructure (Resend + SMTP), lead notification React Email template, wire into POST /api/leads
+- [ ] 06-02-PLAN.md — Newsletter subscribe (table migration, API route, confirmation email, home page form)
+- [ ] 06-03-PLAN.md — Newsletter unsubscribe (API route, confirmation page at /unsubscribe?token=UUID)
+
 ---
 
 ### Phase 7: AI Intelligence
@@ -89,7 +96,7 @@ Plans:
 | 3. AI Playground | v1.0 | 2/2 | Complete | 2026-05-01 |
 | 4. Lead Capture & Deploy | v1.0 | 3/3 | Complete | 2026-05-01 |
 | 5. CMS Integration | v2.0 | 2/2 | Complete | — |
-| 6. Engagement | v2.0 | 0/0 | Pending | — |
+| 6. Engagement | v2.0 | 3/3 | Pending | — |
 | 7. AI Intelligence | v2.0 | 0/0 | Pending | — |
 
 ---
