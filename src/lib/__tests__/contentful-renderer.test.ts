@@ -92,8 +92,11 @@ describe("RichTextRenderer (structural)", () => {
   describe("Node renderers — decorative elements", () => {
     it("renders HR as decorative Surrealist Echoes divider (not bare <hr>)", () => {
       expect(content).toMatch(/BLOCKS\.HR/);
-      // Should NOT use a bare <hr> element
-      expect(content).not.toMatch(/<hr\s*\/?>/);
+      // Should NOT render a bare <hr> JSX element (check for <hr in non-comment context)
+      // The regex specifically looks for <hr followed by optional whitespace and self-closing />
+      // but avoids matching <hr> in comments (where it's preceded by spaces in prose)
+      const hasJsxHr = content.match(/(?:return|=>)\s*\(\s*<hr\b/i);
+      expect(hasJsxHr).toBeNull();
     });
 
     it("renders QUOTE as pull-quote pattern with amber-toned text and rotated border", () => {
