@@ -6,11 +6,9 @@ const { mockGetEntries } = vi.hoisted(() => ({
 }));
 
 vi.mock("contentful", () => ({
-  default: {
-    createClient: vi.fn(() => ({
-      getEntries: mockGetEntries,
-    })),
-  },
+  createClient: vi.fn(() => ({
+    getEntries: mockGetEntries,
+  })),
 }));
 
 // Dynamic import of the module under test (so mocks apply)
@@ -225,6 +223,8 @@ describe("contentful client", () => {
       const article = await fetchArticleBySlug("test-article-1");
       expect(article).not.toBeNull();
       expect(article!.id).toBe("test-article-1");
+      // Detail page gets rich text Document
+      expect(article).toHaveProperty("bodyDoc");
     });
 
     it("returns null when no entry matches slug", async () => {
@@ -245,6 +245,8 @@ describe("contentful client", () => {
       const article = await fetchArticleBySlug("fallback-1");
       expect(article).not.toBeNull();
       expect(article!.id).toBe("fallback-1");
+      // Fallback also provides a bodyDoc for detail page rendering
+      expect(article).toHaveProperty("bodyDoc");
     });
   });
 });
