@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { PulseButton } from "@/components/PulseButton";
 import { Icon } from "@/components/Icon";
+import { NewsletterForm } from "@/components/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "The Persistence of Intelligence",
@@ -110,6 +111,11 @@ export default function HomePage() {
               </button>
             </div>
           </div>
+        </section>
+
+        {/* Newsletter Section — Phase 6 (per D-10) */}
+        <section className="max-w-2xl mx-auto w-full">
+          <NewsletterForm />
         </section>
       </div>
     </>

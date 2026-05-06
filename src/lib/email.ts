@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 import nodemailer from "nodemailer";
 import { LeadNotificationEmail } from "@/emails/lead-notification";
+import { SubscribeConfirmationEmail } from "@/emails/subscribe-confirmation";
 
 // ─── Lazy-init Resend client ─────────────────────────────────────────────────
 const resend = process.env.RESEND_API_KEY
@@ -129,14 +130,86 @@ export async function sendLeadNotification(
 }
 
 /**
- * Send a subscription confirmation email.
+ * Send a subscription confirmation email to the subscriber.
  *
- * Stub — will be implemented in Plan 02 when the
- * SubscribeConfirmationEmail template is created.
+ * Provider selection (per D-01):
+ *   1. Resend (primary) — if RESEND_API_KEY is set
+ *   2. SMTP (fallback) — if SMTP_HOST is set
+ *   3. Skip — if neither is configured
+ *
+ * Returns `false` on any delivery failure (fire-and-forget per D-04).
+ * Never throws — callers can `void sendSubscribeConfirmation(...)` without try/catch.
  */
 export async function sendSubscribeConfirmation(
-  _email: string
+  email: string
 ): Promise<boolean> {
-  // TODO: Implement in Plan 02 — render SubscribeConfirmationEmail template
-  return false;
+  if (!email) return false;
+
+  try {
+    // ── Primary: Resend ──
+    if (resend) {
+      const from = process.env.RESEND_FROM_ADDRESS;
+      if (!from) {
+        console.warn(
+          "Resend configured but RESEND_FROM_ADDRESS is missing. Falling back to SMTP."
+        );
+      } else {
+        await resend.emails.send({
+          from,
+          to: email,
+          subject: "You're in the echo — Nur Amirah",
+          react: SubscribeConfirmationEmail({ email }),
+        });
+        return true;
+      }
+    }
+
+    // ── Fallback: SMTP ──
+    if (transporter) {
+      const html = buildSubscribeConfirmationHtml(email);
+      await transporter.sendMail({
+        from:
+          process.env.SMTP_USER ||
+          process.env.RESEND_FROM_ADDRESS ||
+          email,
+        to: email,
+        subject: "You're in the echo — Nur Amirah",
+        html,
+      });
+      return true;
+    }
+
+    console.warn(
+      "Email not configured — skipping subscribe confirmation. Set RESEND_API_KEY or SMTP_HOST."
+    );
+    return false;
+  } catch (err) {
+    console.error("Subscribe confirmation delivery failed:", err);
+    return false;
+  }
+}
+
+// ─── HTML fallback for subscribe confirmation (no React Email rendering) ─────
+
+function buildSubscribeConfirmationHtml(email: string): string {
+  return `
+    <div style="background-color:#171305;color:#ebe2c8;font-family:system-ui,sans-serif;padding:24px;max-width:600px;margin:0 auto;">
+      <div style="border-left:4px solid #ffc66b;padding-left:16px;margin-bottom:24px;">
+        <h2 style="color:#ffc66b;font-size:28px;font-weight:700;margin-top:0;">You're in the echo.</h2>
+      </div>
+      <p style="font-size:16px;margin:8px 0;line-height:1.6;">
+        Thank you for subscribing. You'll receive occasional transmissions from
+        the boundary between artificial cognition and human dreaming.
+      </p>
+      <p style="font-size:14px;margin:16px 0;color:#9d8e7c;font-style:italic;">
+        Subscribed as: ${email}
+      </p>
+      <p style="font-size:14px;margin:8px 0;line-height:1.6;">
+        If you ever wish to leave the echo, you can unsubscribe at any time.
+      </p>
+      <p style="color:#9d8e7c;font-size:13px;margin-top:24px;padding-top:16px;border-top:1px solid #504535;">
+        NUR AMIRAH MOHD KAMIL — Portfolio &amp; AI Playground
+      </p>
+    </div>
+  `;
 }
