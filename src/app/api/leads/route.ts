@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { z } from "zod";
 import { getSupabase } from "@/lib/supabase";
+import { sendLeadNotification } from "@/lib/email";
 
 const leadSchema = z.object({
   project_name: z
@@ -63,6 +64,17 @@ export async function POST(request: NextRequest) {
         { status: 500 }
       );
     }
+
+    // Fire-and-forget: notify site owner without blocking response (LEAD-05)
+    sendLeadNotification({
+      project_name,
+      email: email || null,
+      whatsapp: whatsapp || null,
+      intent,
+      submitted_at: new Date().toISOString(),
+    }).catch((err) =>
+      console.error("Lead notification delivery failed:", err)
+    );
 
     return Response.json({ success: true, lead: data }, { status: 200 });
   } catch (error) {
