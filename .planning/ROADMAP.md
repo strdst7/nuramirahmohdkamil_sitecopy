@@ -34,7 +34,7 @@ See [milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md) for full phase deta
 **Plans:** 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Contentful client utility, ISR-driven Insights and Portfolio listing pages with fallback
+- [x] 05-01-PLAN.md — Contentful client utility, ISR-driven Insights and Portfolio listing pages with fallback
 - [ ] 05-02-PLAN.md — Rich text renderer with Surrealist Echoes typography, immersive article detail page at /insights/[slug]
 
 **Success criteria:**
@@ -88,7 +88,7 @@ Plans:
 | 2. Content Pages | v1.0 | 4/4 | Complete | 2026-05-01 |
 | 3. AI Playground | v1.0 | 2/2 | Complete | 2026-05-01 |
 | 4. Lead Capture & Deploy | v1.0 | 3/3 | Complete | 2026-05-01 |
-| 5. CMS Integration | v2.0 | 0/2 | Pending | — |
+| 5. CMS Integration | v2.0 | 1/2 | In Progress | — |
 | 6. Engagement | v2.0 | 0/0 | Pending | — |
 | 7. AI Intelligence | v2.0 | 0/0 | Pending | — |
 
