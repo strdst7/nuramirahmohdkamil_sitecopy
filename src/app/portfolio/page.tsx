@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { projects } from "@/data/projects";
+import { fetchProjects } from "@/lib/contentful";
 import { Icon, type IconName } from "@/components/Icon";
 import { PulseButton } from "@/components/PulseButton";
+
+export const revalidate = 3600; // ISR: revalidate every 1 hour (per D-05)
 
 export const metadata: Metadata = {
   title: "The Archive of Dreams",
@@ -16,7 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const projects = await fetchProjects();
+
   return (
     <main className="relative z-10 w-full pt-40 pb-64 px-8 md:px-horizon">
       {/* Ambient glow */}
