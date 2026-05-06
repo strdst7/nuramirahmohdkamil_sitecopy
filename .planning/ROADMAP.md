@@ -64,7 +64,7 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Email infrastructure (Resend + SMTP), lead notification React Email template, wire into POST /api/leads
-- [ ] 06-02-PLAN.md — Newsletter subscribe (table migration, API route, confirmation email, home page form)
+- [x] 06-02-PLAN.md — Newsletter subscribe (table migration, API route, confirmation email, home page form)
 - [ ] 06-03-PLAN.md — Newsletter unsubscribe (API route, confirmation page at /unsubscribe?token=UUID)
 
 ---
